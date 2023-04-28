@@ -86,7 +86,7 @@ export async function saveProductByIdFile(updatedProd, id){
 
 export async function deleteProductById(id){
     let deletedProduct = await container.deleteProductById(id);
-    if (!deletedProduct || Object.keys(deletedProduct).length === 0){
+    if (!deletedProduct || Object.keys(deletedProduct).length === 1){
         deletedProduct = {
             error: "Producto no encontrado"
         }

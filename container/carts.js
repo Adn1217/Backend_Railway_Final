@@ -147,7 +147,8 @@ export async function deleteProductInCartById(id_prod, id_cart) {
     const cart = await carritoFile.deleteProductInCartById(id_prod, id_cart);
     const cartMongoAtlas = await carritoMongoAtlas.deleteProductInCartById(id_prod, id_cart);
     // console.log('Carrito Firebase: ', cartFirebase);
-    const cartDTO = transformToProdDTO(cartFirebase);
+    let cartDTO = transformToProdDTO(cartFirebase);
+    (!cartFirebase) && (cartDTO = transformToDTO(cartFirebase));
     console.log('Carritos DTO: ', JSON.stringify(cartDTO, null, '\t'));
     return cartDTO
 }
