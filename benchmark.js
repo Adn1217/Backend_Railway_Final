@@ -23,4 +23,4 @@ function run(url){
 }
 
 // run('http://localhost/randoms/?cant=20');
-run('http://localhost/randoms/sync?cant=20');
+run('https://backendrailway.up.railway.app:/randoms/sync?cant=20');

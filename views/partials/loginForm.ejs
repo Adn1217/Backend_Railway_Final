@@ -21,8 +21,8 @@
     if (port){
         port =`:${port}`
     }
-    const server ='localhost';
-    const uri = `http://${server}${port}`;
+    const server ='backendrailway.up.railway.app';
+    const uri = `https://${server}${port}`;
     async function login(user, pwd){
         if (user !== '' && pwd !== ''){
             errors.classList.remove('errorLabel');

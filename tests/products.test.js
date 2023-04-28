@@ -14,11 +14,11 @@ const pwd = process.env.TEST_PASSWORD;
 
 
 axios.defaults = {
-    baseURL: `http://localhost`,
+    baseURL: `https://backendrailway.up.railway.app`,
     withCredentials: true,
 }
 
-const baseUrl = 'http://localhost';
+const baseUrl = 'https://backendrailway.up.railway.app';
 const request = supertest(baseUrl);
 
 await authenticate(user, pwd);

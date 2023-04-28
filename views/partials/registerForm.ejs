@@ -47,8 +47,8 @@
     if (port){
         port =`:${port}`
     }
-    const server ='localhost';
-    const uri = `http://${server}${port}`;
+    const server ='backendrailway.up.railway.app';
+    const uri = `https://${server}${port}`;
     async function register(user, mail, server, telArea, telephone, pwd){
         let registerMail = '';
         let tel = telArea + telephone;

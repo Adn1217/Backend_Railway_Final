@@ -5,8 +5,8 @@ let port='';
 if (port){
     port =`:${port}`
 }
-const server ='localhost';
-const uri = `http://${server}${port}`;
+const server ='backendrailway.up.railway.app:';
+const uri = `https://${server}${port}`;
 
 function checkInputs(fields, type='products'){
     let errorDiv = results;
