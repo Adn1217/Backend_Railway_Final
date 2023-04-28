@@ -1,0 +1,265 @@
+paths:
+  /carrito:
+    post:
+      summary: Crea y almacena un nuevo carrito con identificador único.
+      operationId: saveCart
+      tags:
+        - Carritos
+      parameters:
+        - name: auth
+          in: header
+          description: Rol de usuario.
+          required: true
+          schema:
+            type: string
+            enum: 
+              - true
+              - false
+            default: true
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/NewCart'
+      responses:
+        "200":
+          description: El carrito fue creado y almacenado correctamente.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/savedCart'
+        "201":
+          description: El carrito fue creado y almacenado correctamente.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/savedCart'
+        "400":
+          description: Petición mal ingresada.
+        "401":
+          description: Rol autenticado con permisos insuficientes.
+    get:
+      summary: Consulta todos los carritos guardados.
+      operationId: getCarts
+      tags:
+        - Carritos
+      responses:
+        "200":
+          description: Los carritos fueron encontrados correctamente.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cart'
+        "201":
+          description: Los carritos fueron encontrados correctamente.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cart'
+        "400":
+          description: Petición mal ingresada.
+  /carrito/{id}:
+    delete:
+      summary: Se elimina carrito con identificador único.
+      operationId: deleteCartById
+      tags:
+        - Carritos
+      parameters:
+        - name: auth
+          in: header
+          description: Rol de usuario.
+          required: true
+          schema:
+            type: string
+            enum: 
+              - true
+              - false
+            default: true
+        - name: id
+          in: path
+          description: Id único del carrito a eliminar.
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: El carrito fue eliminado correctamente o no se encontró en BD.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/deletedCart'
+        "201":
+          description: El producto fue eliminado correctamente.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/deletedCart'
+        "400":
+          description: Petición mal ingresada.
+        "401":
+          description: Rol autenticado con permisos insuficientes.
+  /carrito/{id}/productos:
+    post:
+      summary: Agrega producto a carrito.
+      operationId: saveProductInCartById
+      tags:
+        - Carritos
+      parameters:
+        - name: auth
+          in: header
+          description: Rol de usuario.
+          required: true
+          schema:
+            type: string
+            enum: 
+              - true
+              - false
+            default: true
+        - name: id
+          in: path
+          description: Id único del carrito a consultar.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/NewProductInCart'
+      responses:
+        "200":
+          description: El producto fue agregado correctamente al carrito o este no existe.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cart'
+        "201":
+          description: El producto fue agregado correctamente al carrito o este no existe.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cart'
+        "400":
+          description: Petición mal ingresada.
+        "401":
+          description: Rol autenticado con permisos insuficientes.
+    get:
+      summary: Consulta productos de un carrito por id.
+      operationId: getCartById
+      tags:
+        - Carritos
+      parameters:
+        - name: id
+          in: path
+          description: Id único del carrito a consultar.
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: El carrito fue encontrado correctamente o no se encuentra en BD.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CartProducts'
+        "201":
+          description: El carrito fue encontrado correctamente o no se encuentra en BD.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CartProducts'
+        "400":
+          description: Petición mal ingresada.
+    put:
+      summary: Actualizar carrito.
+      operationId: updateCartById
+      tags:
+        - Carritos
+      parameters:
+        - name: auth
+          in: header
+          description: Rol de usuario.
+          required: true
+          schema:
+            type: string
+            enum: 
+              - true
+              - false
+            default: true
+        - name: id
+          in: path
+          description: Id único del carrito a modificar.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/NewCart'
+      responses:
+        "200":
+          description: El carrito fue actualizado correctamente.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cart'
+        "201":
+          description: El carrito fue actualizado correctamente.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cart'
+        "400":
+          description: Petición mal ingresada.
+        "401":
+          description: Rol autenticado con permisos insuficientes.
+  /carrito/{idCart}/productos/{idProd}:
+    delete:
+      summary: Se elimina producto de carrito mediante identificadores únicos.
+      operationId: deleteProductInCartById
+      tags:
+        - Carritos
+      parameters:
+        - name: auth
+          in: header
+          description: Rol de usuario.
+          required: true
+          schema:
+            type: string
+            enum: 
+              - true
+              - false
+            default: true
+        - name: idCart
+          in: path
+          description: Id único del carrito.
+          required: true
+          schema:
+            type: string
+        - name: idProd
+          in: path
+          description: Id único del producto a eliminar.
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: El producto fue eliminado correctamente del carrito o no fue encontrado en BD.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/deletedCart'
+        "201":
+          description: El producto fue eliminado correctamente del carrito o no fue encontrado en BD.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/deletedCart'
+        "400":
+          description: Petición mal ingresada.
+        "401":
+          description: Rol autenticado con permisos insuficientes.

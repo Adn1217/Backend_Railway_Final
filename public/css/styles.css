@@ -1,0 +1,160 @@
+.btn {
+    margin: 10px;
+    min-width: 100px;
+}
+#buttons{
+    margin-top: 20px;
+}
+
+#Saludo{
+    text-align: center;
+}
+
+#Saludo div{
+    display: inline-block;
+}
+
+#results{
+    margin-left: auto;
+    /* width: 100%; */
+}
+
+fieldset label {
+    margin: 1rem 0 1rem 0.75rem;
+}
+
+fieldset div {
+    min-width: 14rem
+}
+
+fieldset > div {
+    display: inline-block;
+    max-width: 45%;
+    vertical-align: top;
+}
+
+#productForm {
+    border-right: 1px dashed;
+    border-color: gray;
+    padding-right: 15px;
+}
+
+#cartForm {
+    padding-left: 10px;
+}
+
+#cartInputs > div{
+    display: inline-block;
+    margin-left: 10px;
+    min-width: 10rem;
+}
+
+#cartInputs div:first-child {
+    display: block;
+    min-width: 10rem;
+}
+
+#cartResults, #info {
+    /* white-space: normal; */
+    word-wrap: normal;
+    word-break: break-all;
+}
+
+/* #serviceTypeSelection div, #productRolSelection div, #cartRolSelection div{
+    display: inline-block;
+} */
+
+div:has(>input[type="checkbox"]:not(:checked)) label:first-child {
+    font-weight: bold;
+}
+
+#serviceTypeSelection input:checked + label , #productRolSelection input:checked + label, #cartRolSelection input:checked + label {
+    font-weight: bold;
+}
+
+#serviceTypeSelection label, #productRolSelection label, #cartRolSelection label{
+    margin: 0;
+}
+
+#serviceTypeSelection input, #productRolSelection input, #cartRolSelection input{
+    margin: 0 1rem 0 1rem;
+}
+
+.errorLabel{
+    color: red;
+}
+
+.errorInput{
+    border-color: red !important;
+}
+
+img {
+    min-width: 8rem;
+    min-height: 8rem;
+    max-width: 10rem;
+    max-height: 10rem;
+}
+
+td {
+    /* text-align: center; */
+    vertical-align: middle;
+    max-width: 10rem;
+}
+
+#mail {
+    display: inline;
+}
+
+#chat input{
+    display: inline;
+    width: 50%;
+    margin: 10px 0px 10px 0px;
+}
+
+#chat label{
+    min-width: 4rem;
+}
+
+#server {
+    display: inline;
+}
+
+#server span {
+    display: inline;
+    width: 2.5rem;
+}
+
+#server input {
+    width: 30%;
+}
+
+#server input:first-of-type {
+    width: 65%;
+}
+
+#server {
+    display: flex;
+}
+
+#tel {
+    display: flex;
+    min-width: 16rem;
+}
+
+#tel input:first-of-type {
+    width: 40%;
+}
+
+#tel span {
+    margin: 5px;
+}
+
+#msj {
+    border-style: solid;
+    border-width: 1px;
+    border-color: green;
+    /* border-radius: 10%; */
+    padding: 0 1rem 0 1rem;
+    margin-bottom: 1rem;
+    background-color: lightskyblue;
+}

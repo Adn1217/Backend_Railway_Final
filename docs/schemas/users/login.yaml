@@ -1,0 +1,51 @@
+#Login
+components:
+  schemas:
+    Login:
+      type: object
+      required:
+        - username
+        - password
+      properties:
+        username:
+          type: string
+          description: Usuario registrado.
+        password:
+          type: string
+          description: Contraseña registrada del usuario.
+      example:
+        username: "Adrian"
+        password: "1234"
+    Logout:
+      type: object
+      required:
+        - user
+        - eliminado
+      properties:
+        user:
+          type: string
+          description: Usuario registrado.
+        eliminado:
+          type: string
+          description: Sesión de usuario eliminada.
+      example:
+        user: "Adrian"
+        eliminado: "Ok"
+  requestBodies:
+    Login:
+      type: object
+      required:
+        - username
+        - password
+      properties:
+        username: 
+          type: string
+          description: Usuario registrado.
+        password: 
+          type: string
+          format: password
+          description: Contraseña asociada al usuario.
+      example:
+        usuario: "Adrian"
+        password: "1234"
+

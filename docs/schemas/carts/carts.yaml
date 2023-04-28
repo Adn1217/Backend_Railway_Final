@@ -1,0 +1,77 @@
+#Carts
+components:
+  schemas:
+    Cart:
+      type: object
+      required:
+        - id
+        - productos
+        - usuario
+      properties:
+        id:
+          type: string
+          description: Identificador autogenerado de cada carrito.
+        productos:
+          type: array
+          description: Lista de productos en el carrito.
+        usuario:
+          type: string
+          description: Usuario asociado al carrito.
+      example:
+        id: "7dYrHpHSziLfUMCs05nC"
+        productos:
+          - id: "7dYrHpHSziLfUMCs05nC"
+            code: "Prd126"
+            description: "Este producto es ideal para el dibujo técnico"
+            price: 123.5
+            stock: 500
+            thumbnail: "https://http2.mlstatic.com/D_NQ_NP_2X_955707-MCO44495623436_012021-F.webp"
+            title: "Escuadra"
+        usuario: "Alejandra Fernández"
+    savedCart:
+      type: object
+      properties:
+        Guardado: 
+          type: string
+          description: Identificador autogenerado de carrito guardado.
+      example:
+          Guardado: "ZjJuug8Ip0PgbrCpprEm"
+    CartProducts:
+      type: object
+      required:
+        - productos
+      properties:
+        productos:
+          type: array
+          description: Lista de productos en el carrito.
+      example:
+        productos:
+          - id: "7dYrHpHSziLfUMCs05nC"
+            code: "Prd126"
+            description: "Este producto es ideal para el dibujo técnico"
+            price: 123.5
+            stock: 500
+            thumbnail: "https://http2.mlstatic.com/D_NQ_NP_2X_955707-MCO44495623436_012021-F.webp"
+            title: "Escuadra"
+    deletedCart:
+      type: object
+      required:
+        - productos
+        - usuario
+      properties:
+        productos:
+          type: array
+          description: Lista de productos en el carrito.
+        usuario:
+          type: string
+          description: Usuario asociado al carrito.
+      example:
+        eliminado:
+          productos:
+              code: "Prd126"
+              description: "Este producto es ideal para el dibujo técnico"
+              price: 123.5
+              stock: 500
+              thumbnail: "https://http2.mlstatic.com/D_NQ_NP_2X_955707-MCO44495623436_012021-F.webp"
+              title: "Escuadra"
+          usuario: "Alejandra Fernández"

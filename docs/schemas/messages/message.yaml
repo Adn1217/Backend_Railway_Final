@@ -1,0 +1,28 @@
+#Messages
+components:
+  schemas:
+    Message:
+      type: object
+      required:
+        - id
+        - fecha
+        - mensaje
+        - usuario
+      properties:
+        id:
+          type: string
+          description: Identificador autogenerado de cada mensaje.
+        fecha:
+          type: string
+          description: Código de identificación de cada producto con el formato "yyyy-mm-ddThh:mm:ss.msZ"
+        mensaje:
+          type: string
+          description: Mensaje enviado.
+        usuario:
+          type: string
+          description: Usuario remitente del mensaje.
+      example:
+        id: "3X0wvhHGBnSzFICvUuz1"
+        fecha: "2023-04-11T23:29:24.608Z"
+        mensaje: "Buenos días"
+        usuario: "Adrian"

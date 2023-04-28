@@ -1,0 +1,61 @@
+#Register
+components:
+  schemas:
+    Register:
+      type: object
+      required:
+        - status
+      properties:
+        status:
+          type: string
+          description: Estado de registro.
+      example:
+        status: "Ok"
+    RegisterFailed:
+      type: object
+      required:
+        - status
+      properties:
+        status:
+          type: string
+          description: Estado de registro.
+      example:
+        status: "El usuario ya existe"
+  requestBodies:
+    Register:
+      type: object
+      required:
+        - username
+        - mail
+        - tel
+        - edad
+        - avatar
+        - password
+      properties:
+        username: 
+          type: string
+          description: Usuario registrado.
+        mail: 
+          type: string
+          description: Correo electrónico asociado al usuario registrado.
+        tel: 
+          type: string
+          description: Teléfono asociado al usuario registrado.
+        edad: 
+          type: number
+          description: Edad del usuario registrado.
+        avatar: 
+          type: string
+          description: URL pública asociada al usuario registrado.
+        password: 
+          type: string
+          format: password
+          description: Contraseña asociada al usuario.
+      example:
+        usuario: "Romario"
+        mail: "roma@hotmail.com"
+        tel: "3553254"
+        edad: 35
+        avatar: 'https://urlPublicaDeAvatar.com'
+        password: "1234"
+

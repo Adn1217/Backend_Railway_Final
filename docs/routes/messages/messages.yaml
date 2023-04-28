@@ -1,0 +1,51 @@
+
+paths:
+  /mensajes:
+    post:
+      summary: Crea y almacena un nuevo mensaje con identificador único.
+      operationId: saveMessage
+      tags:
+        - Mensajes
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/NewMessage'
+      responses:
+        "200":
+          description: El producto fue creado y almacenado correctamente.
+          # content: 
+          #   application/json:
+          #     schema:
+          #       $ref: '#/components/schemas/savedProduct'
+        "201":
+          description: El producto fue creado y almacenado correctamente.
+        #   content: 
+        #     application/json:
+        #       schema:
+        #         $ref: '#/components/schemas/savedProduct'
+        "400":
+          description: Petición mal ingresada.
+        "401":
+          description: Rol autenticado con permisos insuficientes.
+    get:
+      summary: Consulta todos los productos guardados.
+      operationId: getMessages
+      tags:
+        - Mensajes
+      responses:
+        "200":
+          description: Los productos fueron encontrados correctamente.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Message'
+        "201":
+          description: Los productos fueron encontrados correctamente.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        "400":
+          description: Petición mal ingresada.

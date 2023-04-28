@@ -1,0 +1,11 @@
+tags:
+  - name: Register
+    description: Recursos para administrar servicios de Registro de usuarios.
+  - name: Login
+    description: Recursos para administrar servicios de Login de usuarios registrados.
+  - name: Productos
+    description: Recursos para administrar servicios Productos.
+  - name: Mensajes
+    description: Recursos para administrar servicios de Mensajes.
+  - name: Carritos
+    description: Recursos para administrar servicios de Carritos.

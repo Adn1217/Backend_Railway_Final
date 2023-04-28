@@ -1,0 +1,77 @@
+[
+  {
+    "id": "1dHWNdUZ4sVmIolHxciz",
+    "usuario": "danaemeneses5@gmail.com",
+    "productos": [
+      {
+        "id": 1,
+        "code": "126",
+        "title": "reglaaa",
+        "description": "plastico transparente",
+        "price": 300,
+        "stock": 500,
+        "thumbnail": "https://www.iconfinder.com/icons/2824436/ruler_school_stationary_triangle_icon"
+      }
+    ]
+  },
+  {
+    "id": "3aesOnWUDpgZAqKNEftY",
+    "usuario": "AFC",
+    "productos": []
+  },
+  {
+    "id": "5YrBn9SftUYSGFaUDdgY",
+    "productos": []
+  },
+  {
+    "id": "HJy9lo3kgkngIPehvjFA",
+    "timestamp": "30/11/2022, 23:21:28",
+    "usuario": "Alejandra Fernández",
+    "productos": [
+      {
+        "id": 1,
+        "code": "prd5542",
+        "title": "Escuadra",
+        "description": "Este producto es ideal para el dibujo técnico",
+        "price": 123.5,
+        "stock": 500,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_955707-MCO44495623436_012021-F.webp"
+      },
+      {
+        "id": 2,
+        "code": "prd5543",
+        "title": "Calculadora",
+        "description": "Este producto facilita la matemática",
+        "price": 234.56,
+        "stock": 2500,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_771821-MCO52197432698_102022-F.webp"
+      }
+    ]
+  },
+  {
+    "id": "RzTL5LVAvsFq3yiUiwSW",
+    "timestamp": "10/12/2022, 19:48:21",
+    "usuario": "Estefano Pelinga",
+    "productos": []
+  },
+  {
+    "id": "ZjJuug8Ip0PgbrCpprEm",
+    "usuario": "Alejandra Fernández Castro",
+    "productos": {}
+  },
+  {
+    "id": "rS179r56hmkUADWA0Ind",
+    "usuario": "Adrian Fernández 2",
+    "productos": [
+      {
+        "id": 1,
+        "code": "2",
+        "title": "2",
+        "description": "modificado",
+        "price": "2",
+        "stock": "2",
+        "thumbnail": "2"
+      }
+    ]
+  }
+]

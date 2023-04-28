@@ -1,0 +1,47 @@
+#New Message
+components:
+  requestBodies:
+    NewMessage:
+      type: object
+      required:
+        - fecha
+        - mensaje
+        - usuario
+        # - id
+        # - nombre
+        # - apellido
+        # - edad
+        # - alias
+        # - avatar
+      properties:
+        fecha: 
+          type: string
+          description: Fecha de envío del mensaje.
+        mensaje: 
+          type: string
+          description: Mensaje enviado.
+        usuario:
+          type: string
+          description: Usuario remitente del mensaje.
+        # code:
+        #   type: string
+        #   description: Código de identificación de cada producto con el formato "Prd####"
+        # nombre:
+        #   type: string
+        #   description: Nombre del usuario.
+        # apellido:
+        #   type: string
+        #   description: Descripción del usuario.
+        # edad:
+        #   type: number
+        #   description: Edad del usuario.
+        # alias:
+        #   type: string
+        #   description: Alias del usuario.
+        # avatar:
+        #   type: string
+        #   description: URL pública a la imagen del avatar el usuario.
+      example:
+        fecha: "2023-04-11T23:29:24.608Z"
+        mensaje: "Buenos días"
+        usuario: "Adrian"

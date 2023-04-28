@@ -1,0 +1,48 @@
+#New Product
+components:
+  requestBodies:
+    NewCart:
+      type: object
+      required:
+        # - productos
+        - usuario
+      properties:
+        # productos:
+        #   type: array
+        #   description: Lista productos en el carrito.
+        #   items: {
+        #     type: object
+        #   }
+        usuario:
+          type: string
+          description: Usuario asociado al carrito.
+      example:
+        # productos:
+        #   - id: "7dYrHpHSziLfUMCs05nC"
+        #     code: "Prd126"
+        #     description: "Este producto es ideal para el dibujo técnico"
+        #     price: 123.5
+        #     stock: 500
+        #     thumbnail: "https://http2.mlstatic.com/D_NQ_NP_2X_955707-MCO44495623436_012021-F.webp"
+        #     title: "Escuadra"
+        usuario: "Alejandra Fernández"
+    NewProductInCart:
+      type: object
+      required:
+        - producto
+      properties:
+        productos:
+          type: array
+          description: Lista productos en el carrito.
+          items: 
+            type: object
+      example:
+          id: "7dYrHpHSziLfUMCs05nC"
+          code: "Prd126"
+          description: "Este producto es ideal para el dibujo técnico"
+          price: 123.5
+          stock: 500
+          thumbnail: "https://http2.mlstatic.com/D_NQ_NP_2X_955707-MCO44495623436_012021-F.webp"
+          title: "Escuadra"
+
+

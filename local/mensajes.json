@@ -1,0 +1,128 @@
+[
+  {
+    "fecha": "2023-01-22T22:37:31.454Z",
+    "usuario": "Alejandra",
+    "mensaje": "Esto es FireBase",
+    "id": 1,
+    "timestamp": "22/01/2023, 17:37:31"
+  },
+  {
+    "fecha": "2023-02-11T22:51:01.091Z",
+    "usuario": "Adrian",
+    "mensaje": "Prueba con Nginx+Socket",
+    "id": 2,
+    "timestamp": "11/02/2023, 17:51:01"
+  },
+  {
+    "fecha": "2023-03-17T02:51:21.418Z",
+    "usuario": "Adrian",
+    "mensaje": "Prueba con funcionalidad en capas",
+    "id": 3,
+    "timestamp": "16/03/2023, 21:51:22"
+  },
+  {
+    "fecha": "2023-03-24T00:01:33.649Z",
+    "usuario": "Adrian",
+    "mensaje": "Prueba con DTO",
+    "id": 4,
+    "timestamp": "23/03/2023, 19:01:34"
+  },
+  {
+    "fecha": "2023-04-08T23:54:20.673Z",
+    "mensaje": "Mensaje guardado por graphql",
+    "usuario": "Adrian",
+    "id": 21,
+    "timestamp": "08/04/2023, 18:54:21"
+  },
+  {
+    "fecha": "2023-04-08T23:54:34.921Z",
+    "mensaje": "Otro mensaje guardado por graphql",
+    "usuario": "Adrian",
+    "id": 22,
+    "timestamp": "08/04/2023, 18:54:35"
+  },
+  {
+    "fecha": "2023-04-19T23:40:39.126Z",
+    "usuario": "8",
+    "mensaje": "Prueba con Nest",
+    "id": 33,
+    "timestamp": "19/04/2023, 18:40:39"
+  },
+  {
+    "fecha": "2023-04-27T17:56:45.785Z",
+    "usuario": "aa",
+    "mensaje": "aaa",
+    "id": 34,
+    "timestamp": "27/04/2023, 12:56:46"
+  },
+  {
+    "fecha": "2023-04-27T17:57:11.896Z",
+    "usuario": "aa",
+    "mensaje": "bbb",
+    "id": 35,
+    "timestamp": "27/04/2023, 12:57:12"
+  },
+  {
+    "fecha": "2023-04-27T19:45:09.178Z",
+    "usuario": "bbb",
+    "mensaje": "b",
+    "id": 36,
+    "timestamp": "27/04/2023, 14:45:10"
+  },
+  {
+    "fecha": "2023-04-27T19:45:20.881Z",
+    "usuario": "bbb",
+    "mensaje": "bbb",
+    "id": 37,
+    "timestamp": "27/04/2023, 14:45:21"
+  },
+  {
+    "fecha": "2023-04-27T19:47:24.103Z",
+    "usuario": "ccc",
+    "mensaje": "ccc",
+    "id": 38,
+    "timestamp": "27/04/2023, 14:47:24"
+  },
+  {
+    "fecha": "2023-04-27T19:48:03.181Z",
+    "usuario": "ccc",
+    "mensaje": "dddd",
+    "id": 39,
+    "timestamp": "27/04/2023, 14:48:06"
+  },
+  {
+    "fecha": "2023-04-27T19:48:23.844Z",
+    "usuario": "ddd",
+    "mensaje": "aaaaaa",
+    "id": 40,
+    "timestamp": "27/04/2023, 14:48:24"
+  },
+  {
+    "fecha": "2023-04-27T19:48:33.317Z",
+    "usuario": "ddd",
+    "mensaje": "bbbbb",
+    "id": 41,
+    "timestamp": "27/04/2023, 14:48:33"
+  },
+  {
+    "fecha": "2023-04-27T19:48:45.842Z",
+    "usuario": "ddd",
+    "mensaje": "eee",
+    "id": 42,
+    "timestamp": "27/04/2023, 14:48:52"
+  },
+  {
+    "fecha": "2023-04-27T19:49:05.533Z",
+    "usuario": "ddd",
+    "mensaje": "eeeee",
+    "id": 43,
+    "timestamp": "27/04/2023, 14:49:08"
+  },
+  {
+    "fecha": "2023-04-27T23:29:24.608Z",
+    "mensaje": "Buenos días",
+    "usuario": "Adrian",
+    "id": 44,
+    "timestamp": "27/04/2023, 14:57:02"
+  }
+]

@@ -1,0 +1,35 @@
+paths:
+  /register:
+    post:
+      summary: Registra un nuevo usuario en el sistema.
+      operationId: passportRegister
+      tags:
+        - Register
+      requestBody:
+        required: true
+        content:
+          # application/json:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/requestBodies/Register'
+      responses:
+        "200":
+          description: Autenticación exitosa.
+          content: 
+            application/x-www-form-urlencoded:
+              schema:
+                $ref: '#/components/schemas/Register'
+        "201":
+          description: Autenticación exitosa.
+          content: 
+            application/x-www-form-urlencoded:
+              schema:
+                $ref: '#/components/schemas/Register'
+        "400":
+          description: Petición mal ingresada o usuario ya registrado.
+          content:
+            application/x-www-form-urlencoded:
+              schema:
+                $ref: '#/components/schemas/RegisterFailed'
+        "401":
+          description: Rol autenticado con permisos insuficientes.

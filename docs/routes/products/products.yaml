@@ -1,0 +1,164 @@
+paths:
+  /productos:
+    post:
+      summary: Crea y almacena un nuevo producto con identificador único.
+      operationId: saveProduct
+      tags:
+        - Productos
+      parameters:
+        - name: auth
+          in: header
+          description: Rol administrador.
+          required: true
+          type: string
+          schema:
+            type: string
+            enum: 
+              - true
+              - false
+            default: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/NewProduct'
+      responses:
+        "200":
+          description: El producto fue creado y almacenado correctamente.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/savedProduct'
+        "201":
+          description: El producto fue creado y almacenado correctamente.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/savedProduct'
+        "400":
+          description: Petición mal ingresada.
+        "401":
+          description: Rol autenticado con permisos insuficientes.
+    get:
+      summary: Consulta todos los productos guardados.
+      operationId: getProducts
+      tags:
+        - Productos
+      responses:
+        "200":
+          description: Los productos fueron encontrados correctamente.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        "201":
+          description: Los productos fueron encontrados correctamente.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        "400":
+          description: Petición mal ingresada.
+  /productos/{id}:
+    get:
+      summary: Consulta un producto por id.
+      operationId: getProductById
+      tags:
+        - Productos
+      parameters:
+        - name: id
+          in: path
+          description: Id único del producto a consultar (nulo para ver todos los productos)
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: El producto fue encontrado correctamente o no se encuentra en BD.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        "201":
+          description: El producto fue encontrado correctamente o no se encuentra en BD.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        "400":
+          description: Petición mal ingresada.
+    put:
+      summary: Se actualiza producto con identificador único.
+      operationId: updateProductById
+      tags:
+        - Productos
+      parameters:
+        - name: auth
+          in: header
+          description: Rol administrador (true/false).
+          required: true
+          type: string
+        - name: id
+          in: path
+          description: Id único del producto a modificar.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/NewProduct'
+      responses:
+        "200":
+          description: El producto fue actualizado correctamente.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        "201":
+          description: El producto fue actualizado correctamente.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        "400":
+          description: Petición mal ingresada.
+        "401":
+          description: Rol autenticado con permisos insuficientes.
+    delete:
+      summary: Se elimina producto con identificador único.
+      operationId: deleteProductById
+      tags:
+        - Productos
+      parameters:
+        - name: auth
+          in: header
+          description: Rol administrador (true/false).
+          required: true
+          type: string
+        - name: id
+          in: path
+          description: Id único del producto a eliminar.
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: El producto fue eliminado correctamente.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        "201":
+          description: El producto fue eliminado correctamente.
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        "400":
+          description: Petición mal ingresada.
+        "401":
+          description: Rol autenticado con permisos insuficientes.

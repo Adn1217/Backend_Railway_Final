@@ -1,0 +1,13 @@
+Servidor/
+node_modules
+Instaladores/
+MongoDB/
+config.js
+config.ts
+db/
+*.env
+*.docx
+*.doc
+*.log
+*.tmp
+*.vscode

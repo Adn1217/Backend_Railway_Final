@@ -1,0 +1,38 @@
+#New Product
+components:
+  requestBodies:
+    NewProduct:
+      type: object
+      required:
+        - code
+        - title
+        - description
+        - price
+        - stock
+        - thumbnail
+      properties:
+        code:
+          type: string
+          description: Código de identificación de cada producto con el formato "Prd####"
+        title:
+          type: string
+          description: Nombre del producto.
+        description:
+          type: string
+          description: Descripción del producto.
+        price:
+          type: number
+          description: Precio del producto.
+        stock:
+          type: number
+          description: Cantidad disponible del producto.
+        thumbnail:
+          type: string
+          description: URL pública a la imagen del producto.
+      example:
+        code: "prd5544"
+        title: "Globo Terraqueo"
+        description: "Este producto permite conocer la geografía mundial"
+        price: 345.67
+        stock: 50
+        thumbnail: "https://firebasestorage.googleapis.com/v0/b/ecommerce-28be7.appspot.com/o/globoTerraqueo.webp?alt=media&token=b1c23fc2-85e5-4174-a647-ac3d7262fbd9"
