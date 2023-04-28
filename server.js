@@ -54,7 +54,7 @@ const options = {
         m: 'mode'
     }, 
     default: {
-        port: 8080,
+        port: parseInt(process.env.PORT, 10) || 8080,
         mode: 'fork'
     }
 };
